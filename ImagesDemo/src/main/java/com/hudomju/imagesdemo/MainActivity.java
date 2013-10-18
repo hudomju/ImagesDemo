@@ -11,7 +11,7 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.hudomju.imagesdemo.app.ServiceDemoApplication;
+import com.hudomju.imagesdemo.app.ImagesDemoApplication;
 import com.hudomju.imagesdemo.io.DownloadManagerApi;
 import com.hudomju.imagesdemo.io.DownloadManagerApi.DownloadManagerApiCallbacks;
 
@@ -36,7 +36,7 @@ public class MainActivity extends Activity implements DownloadManagerApiCallback
     @Override public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
-        ((ServiceDemoApplication) getApplication()).inject(this);
+        ((ImagesDemoApplication) getApplication()).inject(this);
         Views.inject(this);
         mGridView.setAdapter(mGridLayoutAdapter);
         mGridView.setOnItemClickListener(this);

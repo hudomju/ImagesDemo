@@ -18,9 +18,9 @@ import dagger.Provides;
         })
 public class ActivityModule {
 
-    protected final ServiceDemoApplication mApplication;
+    protected final ImagesDemoApplication mApplication;
 
-    public ActivityModule(ServiceDemoApplication application) {
+    public ActivityModule(ImagesDemoApplication application) {
         mApplication = application;
     }
 
