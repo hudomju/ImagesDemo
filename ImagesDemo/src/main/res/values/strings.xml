@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ImagesDemo</string>
+    <string name="action_show_Downloads">Show Downloads</string>
+    <string name="download_image">Download Image to Disk</string>
+    <string name="cancel_image_download">Cancel Image Download</string>
+
+</resources>
