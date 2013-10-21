@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 
+import com.hudomju.imagesdemo.anim.ImageZoomer;
+import com.hudomju.imagesdemo.anim.Zoomer;
 import com.hudomju.imagesdemo.app.ImagesDemoApplication;
 import com.hudomju.imagesdemo.io.DownloadManagerApi;
 import com.hudomju.imagesdemo.io.DownloadManagerApi.DownloadManagerApiCallbacks;
@@ -25,12 +27,13 @@ public class MainActivity extends Activity implements DownloadManagerApiCallback
 
     @Inject GridLayoutAdapter mGridLayoutAdapter;
     @Inject DownloadManagerApi mDownloadManagerApi;
+    @Inject Zoomer mImageZoomer;
+    private String mCurrentUrl = "";
+
     @InjectView(R.id.container) View mContainer;
     @InjectView(R.id.grid_view) GridView mGridView;
     @InjectView(R.id.expanded_image) ImageView mExpandedImageView;
     @InjectView(R.id.btn_img_downloader) Button mBtnImageDownloader;
-    private ImageZoomer mImageZoomer;
-    private String mCurrentUrl = "";
 
     @Override public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

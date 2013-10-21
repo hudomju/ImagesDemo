@@ -1,4 +1,4 @@
-package com.hudomju.imagesdemo;
+package com.hudomju.imagesdemo.anim;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -9,7 +9,7 @@ import android.graphics.Rect;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 
-public class ImageZoomer {
+public class ImageZoomer implements Zoomer {
 
     /**
      * Hold a reference to the current animator, so that it can be canceled mid-way.
@@ -175,12 +175,6 @@ public class ImageZoomer {
         set.start();
         mCurrentAnimator = set;
         mZoomedIn = false;
-    }
-
-    public interface ZoomInCallback {
-
-        public void onZoomInCompleted();
-
     }
 
 }

@@ -3,9 +3,11 @@ package com.hudomju.imagesdemo.app;
 import android.app.DownloadManager;
 import android.content.Context;
 
-import com.hudomju.imagesdemo.io.DownloadManagerApi;
 import com.hudomju.imagesdemo.GridLayoutAdapter;
 import com.hudomju.imagesdemo.MainActivity;
+import com.hudomju.imagesdemo.anim.NullableZoomer;
+import com.hudomju.imagesdemo.anim.Zoomer;
+import com.hudomju.imagesdemo.io.DownloadManagerApi;
 
 import dagger.Module;
 import dagger.Provides;
@@ -30,6 +32,10 @@ public class ActivityModule {
 
     @Provides DownloadManager providDownloadManager() {
         return (DownloadManager) mApplication.getSystemService(Context.DOWNLOAD_SERVICE);
+    }
+
+    @Provides Zoomer providZoomer() {
+        return new NullableZoomer();
     }
 
 }
