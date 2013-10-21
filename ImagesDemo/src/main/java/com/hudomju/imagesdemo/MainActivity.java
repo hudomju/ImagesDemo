@@ -9,7 +9,6 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.hudomju.imagesdemo.app.ImagesDemoApplication;
 import com.hudomju.imagesdemo.io.DownloadManagerApi;
@@ -68,7 +67,6 @@ public class MainActivity extends Activity implements DownloadManagerApiCallback
     }
 
     @Override public void onCompleteDownload(String url) {
-        Toast.makeText(this, url, Toast.LENGTH_SHORT).show();
         if (url.equals(mCurrentUrl))
             mBtnImageDownloader.setText(R.string.download_image);
     }
