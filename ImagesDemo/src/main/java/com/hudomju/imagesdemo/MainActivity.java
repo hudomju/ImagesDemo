@@ -70,7 +70,7 @@ public class MainActivity extends Activity implements DownloadManagerApiCallback
     @Override public void onCompleteDownload(String url) {
         Toast.makeText(this, url, Toast.LENGTH_SHORT).show();
         if (url.equals(mCurrentUrl))
-            mBtnImageDownloader.setText(R.string.cancel_image_download);
+            mBtnImageDownloader.setText(R.string.download_image);
     }
 
     @Override public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
