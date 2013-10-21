@@ -55,8 +55,8 @@ public class MainActivity extends Activity implements DownloadManagerApiCallback
         return super.onOptionsItemSelected(item);
     }
 
-    @Override protected void onStart() {
-        super.onStart();
+    @Override protected void onResume() {
+        super.onResume();
         mDownloadManagerApi.init();
         mDownloadManagerApi.registerCallbacks(this);
     }
